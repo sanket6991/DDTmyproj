@@ -41,12 +41,17 @@ public class TestBase {
 			}
 			driver.get(Config.getProperty("testsiteurl"));
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")), TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")),
+					TimeUnit.SECONDS);
 		}
 	}
 
 	@AfterSuite
 	public void tearDown() {
 
+		if (driver != null) {
+			driver.quit();
+
+		}
 	}
 }
