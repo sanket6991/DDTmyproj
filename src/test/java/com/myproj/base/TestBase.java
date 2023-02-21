@@ -1,13 +1,13 @@
 package com.myproj.base;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v109.browser.Browser;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
@@ -22,15 +22,34 @@ public class TestBase {
 
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
-	public void setUp() throws IOException {
+	public void setUp() {
 
 		if (driver == null) {
-			FileInputStream fis = new FileInputStream(
-					System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
-			Config.load(fis);
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 
-			fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/properties/OR.properties");
-			OR.load(fis);
+			try {
+				Config.load(fis);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "/src/test/resources/properties/OR.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+
+			try {
+				OR.load(fis);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 
 			if (Config.getProperty("browser").equals("chrome")) {
 				driver = new ChromeDriver();
