@@ -1,15 +1,16 @@
 package com.myproj.base;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.v109.browser.Browser;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -19,18 +20,38 @@ public class TestBase {
 	public static Properties Config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-
+	public static WebDriverWait wait;
+	
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
-	public void setUp() throws IOException {
+	public void setUp() {
 
 		if (driver == null) {
-			FileInputStream fis = new FileInputStream(
-					System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
-			Config.load(fis);
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 
-			fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/properties/OR.properties");
-			OR.load(fis);
+			try {
+				Config.load(fis);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
+			try {
+				fis = new FileInputStream(
+						System.getProperty("user.dir") + "/src/test/resources/properties/OR.properties");
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
+
+			try {
+				OR.load(fis);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 
 			if (Config.getProperty("browser").equals("chrome")) {
 				driver = new ChromeDriver();
@@ -43,6 +64,7 @@ public class TestBase {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Integer.parseInt(Config.getProperty("implicit.wait")),
 					TimeUnit.SECONDS);
+		//	wait = new WebDriverWait(driver, 5);
 		}
 	}
 
