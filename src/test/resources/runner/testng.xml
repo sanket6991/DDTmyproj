@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
+		<class name="com.myproj.base.TestBase"></class>
       <class name="com.myproj.testcases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
