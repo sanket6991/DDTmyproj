@@ -2,22 +2,22 @@
 <testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-05T10:10:27 IST" name="Suite" finished-at="2023-03-05T10:10:30 IST" duration-ms="3139">
+  <suite started-at="2023-03-06T00:42:59 IST" name="Suite" finished-at="2023-03-06T00:43:02 IST" duration-ms="3134">
     <groups>
     </groups>
-    <test started-at="2023-03-05T10:10:27 IST" name="Test" finished-at="2023-03-05T10:10:30 IST" duration-ms="3139">
+    <test started-at="2023-03-06T00:42:59 IST" name="Test" finished-at="2023-03-06T00:43:02 IST" duration-ms="3134">
       <class name="com.myproj.base.TestBase">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.base.TestBase@33065d67]" started-at="2023-03-05T10:10:17 IST" name="setUp" finished-at="2023-03-05T10:10:27 IST" duration-ms="9963" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.base.TestBase@cb0755b]" started-at="2023-03-06T00:42:55 IST" name="setUp" finished-at="2023-03-06T00:42:59 IST" duration-ms="4238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.base.TestBase@33065d67]" started-at="2023-03-05T10:10:30 IST" name="tearDown" finished-at="2023-03-05T10:10:30 IST" duration-ms="55" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.base.TestBase@cb0755b]" started-at="2023-03-06T00:43:02 IST" name="tearDown" finished-at="2023-03-06T00:43:02 IST" duration-ms="61" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.myproj.base.TestBase -->
       <class name="com.myproj.testcases.LoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.LoginTest@5afa3c9]" started-at="2023-03-05T10:10:27 IST" name="loginAsBankManager" finished-at="2023-03-05T10:10:30 IST" duration-ms="3092" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.LoginTest@72cc7e6f]" started-at="2023-03-06T00:42:59 IST" name="loginAsBankManager" finished-at="2023-03-06T00:43:02 IST" duration-ms="3083" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
