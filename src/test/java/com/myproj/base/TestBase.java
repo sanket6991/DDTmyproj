@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestBase {
 
 	public static WebDriver driver;
@@ -25,7 +27,7 @@ public class TestBase {
 	public static WebDriverWait wait;
 	public static String browser;
 	
-	@SuppressWarnings("deprecation")
+	//@SuppressWarnings("deprecation")
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
 		
@@ -74,23 +76,17 @@ if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()){
 
 			if (Config.getProperty("browser").equals("firefox")) {
 
-				// System.setProperty("webdriver.gecko.driver", "gecko.exe");
-				//WebDriverManager.firefoxdriver().setup();
+				
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}
 	 else if (Config.getProperty("browser").equals("chrome")) {
 
-			/*System.setProperty("webdriver.chrome.driver",
-					System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
-		*/	
-		//	WebDriverManager.chromedriver().setup();
+			
+		WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			log.debug("Chrome Launched !!!");
-		} else if (Config.getProperty("browser").equals("ie")) {
-
-			System.setProperty("webdriver.ie.driver",
-					System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\IEDriverServer.exe");
-			driver = new InternetExplorerDriver();
+		} 
 
 		}
 
@@ -102,7 +98,7 @@ if(System.getenv("browser")!=null && !System.getenv("browser").isEmpty()){
 		//wait = new WebDriverWait(driver, 5);//
 		Thread.sleep(5000);
 	}
-	}
+	
 
 
 	@AfterSuite
