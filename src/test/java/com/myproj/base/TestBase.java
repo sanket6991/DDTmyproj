@@ -8,11 +8,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -27,6 +27,7 @@ public class TestBase {
 	public static FileInputStream fis;
 	public static WebDriverWait wait;
 	public static String browser;
+	//public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 
 	// @SuppressWarnings("deprecation")
@@ -34,6 +35,7 @@ public class TestBase {
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
 		BasicConfigurator.configure();
+		PropertyConfigurator.configure("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/properties/log4j.properties");
 
 		if (driver == null) {
 			try {
