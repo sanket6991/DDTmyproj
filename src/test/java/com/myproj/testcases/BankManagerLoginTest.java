@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import com.myproj.base.TestBase;
 
-public class LoginTest extends TestBase{
+public class BankManagerLoginTest extends TestBase{
 	
 	@Test
 	public void loginAsBankManager() throws InterruptedException {

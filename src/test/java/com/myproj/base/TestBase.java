@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.myproj.utilities.ExcelReader;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
@@ -31,7 +33,7 @@ public class TestBase {
 	public static String browser;
 	//public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static Logger log = Logger.getLogger("devpinoyLogger");
-
+	public static ExcelReader xlsx = new ExcelReader("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/excel/testdata.xlsx");
 	// @SuppressWarnings("deprecation")
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
