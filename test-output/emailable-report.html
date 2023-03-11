@@ -9,58 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Bank Manager Login Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">33</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Add Customer Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">9</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num attn">2</th><th class="num">0</th><th class="num">0</th><th class="num">42</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Bank Manager Login Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">3,236</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Add Customer Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">653</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">2</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num">3,889</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Bank Manager Login Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.myproj.testcases.BankManagerLoginTest</td><td><a href="#m0">loginAsBankManager</a></td><td rowspan="1">1678443425919</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Add Customer Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.myproj.testcases.AddCustomerTest</td><td><a href="#m1">setUp</a></td><td rowspan="1">1678443422799</td><td rowspan="1">3078</td></tr><tr><th colspan="4">Add Customer Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.myproj.testcases.AddCustomerTest</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1678443425952</td><td rowspan="1">0</td></tr><tr><th colspan="4">Add Customer Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.myproj.testcases.AddCustomerTest</td><td><a href="#m3">addCustomer</a></td><td rowspan="1">1678443425945</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Bank Manager Login Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.myproj.testcases.BankManagerLoginTest</td><td><a href="#m0">loginAsBankManager</a></td><td rowspan="1">1678557189669</td><td rowspan="1">3197</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Add Customer Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.myproj.testcases.AddCustomerTest</td><td><a href="#m1">addCustomer</a></td><td rowspan="1">1678557192901</td><td rowspan="1">642</td></tr></tbody>
 </table>
-<h2>Bank Manager Login Test</h2><h3 id="m0">com.myproj.testcases.BankManagerLoginTest#loginAsBankManager</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:38241/devtools/browser/f3ecb32f-3bcf-4c0d-a509-d11174b5b24f
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-67-generic&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at com.myproj.base.TestBase.setUp(TestBase.java:92)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Add Customer Test</h2><h3 id="m1">com.myproj.testcases.AddCustomerTest#setUp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:38241/devtools/browser/f3ecb32f-3bcf-4c0d-a509-d11174b5b24f
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-67-generic&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at com.myproj.base.TestBase.setUp(TestBase.java:92)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.myproj.testcases.AddCustomerTest#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.myproj.testcases.AddCustomerTest#addCustomer</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td></td><td></td><td></td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.remote.http.ConnectionFailedException: Unable to establish websocket connection to http://localhost:38241/devtools/browser/f3ecb32f-3bcf-4c0d-a509-d11174b5b24f
-Build info: version: &apos;4.8.1&apos;, revision: &apos;8ebccac989&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-67-generic&apos;, java.version: &apos;17.0.5&apos;
-Driver info: driver.version: ChromeDriver
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.&lt;init&gt;(NettyWebSocket.java:102)
-	at org.openqa.selenium.remote.http.netty.NettyWebSocket.lambda$create$3(NettyWebSocket.java:128)
-	at org.openqa.selenium.remote.http.netty.NettyClient.openSocket(NettyClient.java:107)
-	at org.openqa.selenium.devtools.Connection.&lt;init&gt;(Connection.java:78)
-	at org.openqa.selenium.chromium.ChromiumDriver.lambda$new$2(ChromiumDriver.java:116)
-	at java.base/java.util.Optional.map(Optional.java:260)
-	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:114)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:82)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:50)
-	at com.myproj.base.TestBase.setUp(TestBase.java:92)
-... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Bank Manager Login Test</h2><h3 id="m0">com.myproj.testcases.BankManagerLoginTest#loginAsBankManager</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Add Customer Test</h2><h3 id="m1">com.myproj.testcases.AddCustomerTest#addCustomer</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td></td><td></td><td></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

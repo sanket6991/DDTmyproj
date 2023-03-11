@@ -13,8 +13,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -31,15 +34,18 @@ public class TestBase {
 	public static FileInputStream fis;
 	public static WebDriverWait wait;
 	public static String browser;
-	//public static Logger log = Logger.getLogger("devpinoyLogger");
+	// public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static Logger log = Logger.getLogger("devpinoyLogger");
-	public static ExcelReader xlsx = new ExcelReader("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/excel/testdata.xlsx");
+	public static ExcelReader xlsx = new ExcelReader(
+			"/home/sanket-laptop/git/DDTmyproj2/src/test/resources/excel/testdata.xlsx");
+
 	// @SuppressWarnings("deprecation")
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
 		BasicConfigurator.configure();
-		PropertyConfigurator.configure("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/properties/log4j.properties");
+		PropertyConfigurator
+				.configure("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/properties/log4j.properties");
 
 		if (driver == null) {
 			try {
@@ -84,17 +90,37 @@ public class TestBase {
 			if (Config.getProperty("browser").equals("firefox")) {
 
 				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				FirefoxOptions ops1 = new FirefoxOptions();
+                ops1.addArguments("--remote-allow-origins=*");
+                ops1.addArguments("--disable");
+                DesiredCapabilities cp1 = new DesiredCapabilities();
+                cp1.setCapability(ChromeOptions.CAPABILITY, ops1);
+                ops1.merge(cp1);
+				driver = new FirefoxDriver(ops1);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
 				log.debug("Firefox Launched !!!");
 			} else if (Config.getProperty("browser").equals("chrome")) {
 
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				ChromeOptions ops = new ChromeOptions();
+                 ops.addArguments("--remote-allow-origins=*");
+                 ops.addArguments("--disable");
+                 DesiredCapabilities cp = new DesiredCapabilities();
+                 cp.setCapability(ChromeOptions.CAPABILITY, ops);
+                 ops.merge(cp);
+				driver = new ChromeDriver(ops);
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+
 				log.debug("Chrome Launched !!!");
-			} else if (Config.getProperty("browser").equals("chrome")) {
+			} else if (Config.getProperty("browser").equals("edge")) {
 
 				WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
+
 				log.debug("Edge Launched !!!");
 
 			}
@@ -108,16 +134,16 @@ public class TestBase {
 			// Thread.sleep(5000);
 		}
 	}
+
 	public boolean isElementPresent(By by) {
 		try {
 			driver.findElement(by);
 			return true;
-		}
-		catch(NoSuchElementException e) {
-			
+		} catch (NoSuchElementException e) {
+
 		}
 		return false;
-		
+
 	}
 
 	@AfterSuite
