@@ -1,46 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Login Successfully Executed]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>]]>
+    </line>
+    <line>
+      <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png/s><img src=""></img></a>]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-03-11T23:23:09 IST" name="Suite" finished-at="2023-03-11T23:23:13 IST" duration-ms="3908">
+  <suite started-at="2023-04-13T00:18:36 IST" name="Suite" finished-at="2023-04-13T00:18:40 IST" duration-ms="3864">
     <groups>
     </groups>
-    <test started-at="2023-03-11T23:23:09 IST" name="Bank Manager Login Test" finished-at="2023-03-11T23:23:12 IST" duration-ms="3236">
+    <test started-at="2023-04-13T00:18:36 IST" name="Bank Manager Login Test" finished-at="2023-04-13T00:18:40 IST" duration-ms="3284">
       <class name="com.myproj.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@3a4ba480]" started-at="2023-03-11T23:23:09 IST" name="loginAsBankManager" finished-at="2023-03-11T23:23:12 IST" duration-ms="3197" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@47d7bfb3]" started-at="2023-04-13T00:18:37 IST" name="loginAsBankManager" finished-at="2023-04-13T00:18:40 IST" duration-ms="3239" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Login Successfully Executed]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>]]>
+            </line>
+            <line>
+              <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png/s><img src=""></img></a>]]>
+            </line>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.myproj.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2023-03-11T23:23:12 IST" name="Add Customer Test" finished-at="2023-03-11T23:23:13 IST" duration-ms="653">
+    <test started-at="2023-04-13T00:18:40 IST" name="Add Customer Test" finished-at="2023-04-13T00:18:40 IST" duration-ms="561">
       <class name="com.myproj.testcases.AddCustomerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.AddCustomerTest@5eb97ced]" started-at="2023-03-11T23:23:04 IST" name="setUp" finished-at="2023-03-11T23:23:09 IST" duration-ms="5048" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T00:18:31 IST" name="setUp" finished-at="2023-04-13T00:18:36 IST" duration-ms="5518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.AddCustomerTest@5eb97ced]" started-at="2023-03-11T23:23:12 IST" name="addCustomer" data-provider="getData" finished-at="2023-03-11T23:23:13 IST" duration-ms="642" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T00:18:40 IST" name="addCustomer" data-provider="getData" finished-at="2023-04-13T00:18:40 IST" duration-ms="502" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[]]>
+                <![CDATA[gergerg]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[]]>
+                <![CDATA[sdgrgr]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[]]>
+                <![CDATA[seegfgsdf]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Customer added successfully]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.AddCustomerTest@5eb97ced]" started-at="2023-03-11T23:23:13 IST" name="tearDown" finished-at="2023-03-11T23:23:13 IST" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T00:18:40 IST" name="tearDown" finished-at="2023-04-13T00:18:40 IST" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

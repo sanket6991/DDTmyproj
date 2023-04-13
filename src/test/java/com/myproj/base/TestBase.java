@@ -3,6 +3,7 @@ package com.myproj.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -34,18 +35,19 @@ public class TestBase {
 	public static FileInputStream fis;
 	public static WebDriverWait wait;
 	public static String browser;
-	// public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExcelReader xlsx = new ExcelReader(
-			"/home/sanket-laptop/git/DDTmyproj2/src/test/resources/excel/testdata.xlsx");
-
-	// @SuppressWarnings("deprecation")
+		System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
+			//"/home/sanket-laptop/Documents/testdata.xlsx");
+	
+	
+	
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
 		BasicConfigurator.configure();
 		PropertyConfigurator
-				.configure("/home/sanket-laptop/git/DDTmyproj2/src/test/resources/properties/log4j.properties");
+				.configure(System.getProperty("user.dir") + "/src/test/resources/properties/log4j.properties");
 
 		if (driver == null) {
 			try {
@@ -76,7 +78,7 @@ public class TestBase {
 				e.printStackTrace();
 			}
 
-			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
+			if (System.getenv("browser")!= null && !System.getenv("browser").isEmpty()) {
 
 				browser = System.getenv("browser");
 			} else {
@@ -91,11 +93,11 @@ public class TestBase {
 
 				WebDriverManager.firefoxdriver().setup();
 				FirefoxOptions ops1 = new FirefoxOptions();
-                ops1.addArguments("--remote-allow-origins=*");
-                ops1.addArguments("--disable");
-                DesiredCapabilities cp1 = new DesiredCapabilities();
-                cp1.setCapability(ChromeOptions.CAPABILITY, ops1);
-                ops1.merge(cp1);
+				ops1.addArguments("--remote-allow-origins=*");
+				ops1.addArguments("--disable");
+				DesiredCapabilities cp1 = new DesiredCapabilities();
+				cp1.setCapability(ChromeOptions.CAPABILITY, ops1);
+				ops1.merge(cp1);
 				driver = new FirefoxDriver(ops1);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
@@ -104,15 +106,15 @@ public class TestBase {
 
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions ops = new ChromeOptions();
-                 ops.addArguments("--remote-allow-origins=*");
-                 ops.addArguments("--disable");
-                 DesiredCapabilities cp = new DesiredCapabilities();
-                 cp.setCapability(ChromeOptions.CAPABILITY, ops);
-                 ops.merge(cp);
+				ops.addArguments("--remote-allow-origins=*");
+				ops.addArguments("--disable");
+				DesiredCapabilities cp = new DesiredCapabilities();
+				cp.setCapability(ChromeOptions.CAPABILITY, ops);
+				ops.merge(cp);
 				driver = new ChromeDriver(ops);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-
+                wait = new WebDriverWait(driver,Duration.ofSeconds(5));
 				log.debug("Chrome Launched !!!");
 			} else if (Config.getProperty("browser").equals("edge")) {
 
