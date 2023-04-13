@@ -37,11 +37,9 @@ public class TestBase {
 	public static String browser;
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExcelReader xlsx = new ExcelReader(
-		System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
-			//"/home/sanket-laptop/Documents/testdata.xlsx");
-	
-	
-	
+			System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
+	// "/home/sanket-laptop/Documents/testdata.xlsx");
+
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
 	public void setUp() throws InterruptedException {
@@ -78,7 +76,7 @@ public class TestBase {
 				e.printStackTrace();
 			}
 
-			if (System.getenv("browser")!= null && !System.getenv("browser").isEmpty()) {
+			if (System.getenv("browser") != null && !System.getenv("browser").isEmpty()) {
 
 				browser = System.getenv("browser");
 			} else {
@@ -114,7 +112,7 @@ public class TestBase {
 				driver = new ChromeDriver(ops);
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				driver.manage().timeouts().pageLoadTimeout(100, TimeUnit.SECONDS);
-                wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+				wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 				log.debug("Chrome Launched !!!");
 			} else if (Config.getProperty("browser").equals("edge")) {
 

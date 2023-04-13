@@ -12,31 +12,28 @@ import com.myproj.base.TestBase;
 public class AddCustomerTest extends TestBase {
 
 	@Test(dataProvider = "getData")
-	public static void addCustomer(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
+	public static void addCustomer(String firstName, String lastName, String postCode, String alerttext)
+			throws InterruptedException {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addCustBtn"))));
 		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
 		log.debug("Clicked On Add Customer Button !!!");
 		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
-	//	Thread.sleep(3000);
 		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
-		//Thread.sleep(3000);
 		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
-	//	Thread.sleep(3000);
 		log.debug("Added Customer Data !!!");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addbtn"))));
 		driver.findElement(By.cssSelector(OR.getProperty("addbtn"))).click();
 		log.debug("Customer Added Successfully!!!");
-		Alert alert =  wait.until(ExpectedConditions.alertIsPresent());
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alerttext));
 		alert.accept();
 	}
 
 	@DataProvider
 	public Object[][] getData() {
-      	Object[][] data1 = xlsx.getSheetData("Sheet1");
-		
+		Object[][] data1 = xlsx.getSheetData("Sheet1");
+
 		return data1;
 	}
-			
-		 
-	}
 
-
+}
