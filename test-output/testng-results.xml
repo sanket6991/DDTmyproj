@@ -8,15 +8,15 @@
       <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>]]>
     </line>
     <line>
-      <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png/s><img src=""></img></a>]]>
+      <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png><img src=""></img></a>]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-04-13T11:00:47 IST" name="Suite" finished-at="2023-04-13T11:00:48 IST" duration-ms="946">
+  <suite started-at="2023-04-15T10:21:12 IST" name="Suite" finished-at="2023-04-15T10:21:13 IST" duration-ms="935">
     <groups>
     </groups>
-    <test started-at="2023-04-13T11:00:47 IST" name="Bank Manager Login Test" finished-at="2023-04-13T11:00:47 IST" duration-ms="199">
+    <test started-at="2023-04-15T10:21:12 IST" name="Bank Manager Login Test" finished-at="2023-04-15T10:21:12 IST" duration-ms="243">
       <class name="com.myproj.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@47d7bfb3]" started-at="2023-04-13T11:00:47 IST" name="loginAsBankManager" finished-at="2023-04-13T11:00:47 IST" duration-ms="155" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@6be25526]" started-at="2023-04-15T10:21:12 IST" name="loginAsBankManager" finished-at="2023-04-15T10:21:12 IST" duration-ms="190" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Login Successfully Executed]]>
@@ -25,19 +25,19 @@
               <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>]]>
             </line>
             <line>
-              <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png/s><img src=""></img></a>]]>
+              <![CDATA[<a target="_blank" href=/home/sanket-laptop/Desktop/List.png><img src=""></img></a>]]>
             </line>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.myproj.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2023-04-13T11:00:47 IST" name="Add Customer Test" finished-at="2023-04-13T11:00:48 IST" duration-ms="737">
+    <test started-at="2023-04-15T10:21:12 IST" name="Add Customer Test" finished-at="2023-04-15T10:21:13 IST" duration-ms="676">
       <class name="com.myproj.testcases.AddCustomerTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T11:00:45 IST" name="setUp" finished-at="2023-04-13T11:00:47 IST" duration-ms="1915" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.AddCustomerTest@5bb7643d]" started-at="2023-04-15T10:21:05 IST" name="setUp" finished-at="2023-04-15T10:21:12 IST" duration-ms="7011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T11:00:47 IST" name="addCustomer" data-provider="getData" finished-at="2023-04-13T11:00:48 IST" duration-ms="688" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.AddCustomerTest@5bb7643d]" started-at="2023-04-15T10:21:12 IST" name="addCustomer" data-provider="getData" finished-at="2023-04-15T10:21:13 IST" duration-ms="603" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -63,7 +63,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.AddCustomerTest@178270b2]" started-at="2023-04-13T11:00:48 IST" name="tearDown" finished-at="2023-04-13T11:00:48 IST" duration-ms="108" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.AddCustomerTest@5bb7643d]" started-at="2023-04-15T10:21:13 IST" name="tearDown" finished-at="2023-04-15T10:21:13 IST" duration-ms="107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

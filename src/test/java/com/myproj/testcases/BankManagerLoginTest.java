@@ -19,7 +19,7 @@ public class BankManagerLoginTest extends TestBase{
 		log.debug("Login Successfully Executed");
 		Reporter.log("Login Successfully Executed");
 		Reporter.log("<a target=\"_blank\" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>");
-		Reporter.log("<a target=\"_blank\" href=/home/sanket-laptop/Desktop/List.png/s><img src=\"\"></img></a>");
+		Reporter.log("<a target=\"_blank\" href=/home/sanket-laptop/Desktop/List.png><img src=\"\"></img></a>");
 
 	}
 

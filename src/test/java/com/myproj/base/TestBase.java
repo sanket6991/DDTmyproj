@@ -105,6 +105,7 @@ public class TestBase {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions ops = new ChromeOptions();
 				ops.addArguments("--remote-allow-origins=*");
+				ops.setHeadless(true);
 				ops.addArguments("--disable");
 				DesiredCapabilities cp = new DesiredCapabilities();
 				cp.setCapability(ChromeOptions.CAPABILITY, ops);
