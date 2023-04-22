@@ -14,15 +14,15 @@ public class AddCustomerTest extends TestBase {
 	@Test(dataProvider = "getData")
 	public static void addCustomer(String firstName, String lastName, String postCode, String alerttext)
 			throws InterruptedException {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addCustBtn"))));
-		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addCustBtn_CSS"))));
+		click("addCustBtn_CSS");
 		log.debug("Clicked On Add Customer Button !!!");
-		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
-		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
-		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
+		type("firstname_CSS", firstName);
+		type("lastname_CSS", lastName);
+		type("postcode_CSS", postCode);
 		log.debug("Added Customer Data !!!");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addbtn"))));
-		driver.findElement(By.cssSelector(OR.getProperty("addbtn"))).click();
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addbtn_CSS"))));
+		click("addbtn_CSS");
 		log.debug("Customer Added Successfully!!!");
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alerttext));

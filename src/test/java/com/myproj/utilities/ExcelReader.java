@@ -26,7 +26,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-
 public class ExcelReader {
 
 	public String path;
@@ -54,6 +53,7 @@ public class ExcelReader {
 
 	/**
 	 * returns the row count in a sheet
+	 * 
 	 * @param sheetName
 	 * @return
 	 */
@@ -71,6 +71,7 @@ public class ExcelReader {
 
 	/**
 	 * returns the data from a cell
+	 * 
 	 * @param sheetName
 	 * @param colName
 	 * @param rowNum
@@ -139,6 +140,7 @@ public class ExcelReader {
 
 	/**
 	 * returns the data from a cell
+	 * 
 	 * @param sheetName
 	 * @param colNum
 	 * @param rowNum
@@ -194,6 +196,7 @@ public class ExcelReader {
 
 	/**
 	 * returns true if data is set successfully else false
+	 * 
 	 * @param sheetName
 	 * @param colName
 	 * @param rowNum
@@ -252,9 +255,9 @@ public class ExcelReader {
 		return true;
 	}
 
-
 	/**
 	 * returns true if data is set successfully else false
+	 * 
 	 * @param sheetName
 	 * @param colName
 	 * @param rowNum
@@ -327,6 +330,7 @@ public class ExcelReader {
 
 	/**
 	 * returns true if sheet is created successfully else false
+	 * 
 	 * @param sheetname
 	 * @return
 	 */
@@ -346,7 +350,9 @@ public class ExcelReader {
 	}
 
 	/**
-	 * returns true if sheet is removed successfully else false if sheet does not exist
+	 * returns true if sheet is removed successfully else false if sheet does not
+	 * exist
+	 * 
 	 * @param sheetName
 	 * @return
 	 */
@@ -368,9 +374,9 @@ public class ExcelReader {
 		return true;
 	}
 
-
 	/**
 	 * returns true if column is created successfully
+	 * 
 	 * @param sheetName
 	 * @param colName
 	 * @return
@@ -416,6 +422,7 @@ public class ExcelReader {
 
 	/**
 	 * removes a column and all the contents
+	 * 
 	 * @param sheetName
 	 * @param colNum
 	 * @return
@@ -429,7 +436,7 @@ public class ExcelReader {
 			sheet = workbook.getSheet(sheetName);
 			XSSFCellStyle style = workbook.createCellStyle();
 			style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
-			//XSSFCreationHelper createHelper = workbook.getCreationHelper();
+			// XSSFCreationHelper createHelper = workbook.getCreationHelper();
 			style.setFillPattern(FillPatternType.NO_FILL);
 
 			for (int i = 0; i < getRowCount(sheetName); i++) {
@@ -453,9 +460,9 @@ public class ExcelReader {
 
 	}
 
-
 	/**
 	 * find whether sheets exists
+	 * 
 	 * @param sheetName
 	 * @return
 	 */
@@ -471,9 +478,9 @@ public class ExcelReader {
 			return true;
 	}
 
-
 	/**
 	 * returns number of columns in a sheet
+	 * 
 	 * @param sheetName
 	 * @return
 	 */
@@ -494,6 +501,7 @@ public class ExcelReader {
 
 	/**
 	 * add hyperlink in the sheet
+	 * 
 	 * @param sheetName
 	 * @param screenShotColName
 	 * @param testCaseName
@@ -533,7 +541,9 @@ public class ExcelReader {
 	}
 
 	/**
-	 * Read all rows and columns and return 2D Object array: can be used with testNG dataprovider.
+	 * Read all rows and columns and return 2D Object array: can be used with testNG
+	 * dataprovider.
+	 * 
 	 * @param sheetName
 	 * @return
 	 */

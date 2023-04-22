@@ -14,9 +14,9 @@ public class TestProperties {
 				System.getProperty("user.dir") + "/src/test/resources/properties/Config.properties");
 		Config.load(fis);
 		System.out.println(Config.getProperty("browser"));
-		fis = new FileInputStream(System.getProperty("user.dir")+"/src/test/resources/properties/OR.properties");
+		fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/resources/properties/OR.properties");
 		OR.load(fis);
-		
+
 		System.out.println(OR.getProperty("bmlBtn"));
 	}
 }

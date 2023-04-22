@@ -3,23 +3,20 @@ package com.myproj.testcases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.myproj.base.TestBase;
 
-public class BankManagerLoginTest extends TestBase{
-	
+public class BankManagerLoginTest extends TestBase {
+
 	@Test
 	public void loginAsBankManager() throws InterruptedException {
 		log.debug("Inside Login Test");
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("bmlBtn"))));
-		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
-		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn"))),"Login is not Successful");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("bmlBtn_CSS"))));
+		click("bmlBtn_CSS");
+		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn_CSS"))),
+				"Login is not Successful");
 		log.debug("Login Successfully Executed");
-		Reporter.log("Login Successfully Executed");
-		Reporter.log("<a target=\"_blank\" href=/home/sanket-laptop/Desktop/List.png>Screenshot</a>");
-		Reporter.log("<a target=\"_blank\" href=/home/sanket-laptop/Desktop/List.png><img src=\"\"></img></a>");
 
 	}
 

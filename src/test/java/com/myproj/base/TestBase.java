@@ -24,6 +24,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.myproj.utilities.ExcelReader;
+import com.myproj.utilities.ExtentManager;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -38,7 +42,10 @@ public class TestBase {
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 	public static ExcelReader xlsx = new ExcelReader(
 			System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
+
 	// "/home/sanket-laptop/Documents/testdata.xlsx");
+	public ExtentReports reo = ExtentManager.getInstance();
+	public static ExtentTest test;
 
 	@SuppressWarnings("deprecation")
 	@BeforeSuite
@@ -145,6 +152,28 @@ public class TestBase {
 		}
 		return false;
 
+	}
+
+	public static void click(String locator) {
+		if (locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		} else if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).click();
+		} else if (locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).click();
+		}
+		test.log(LogStatus.INFO, "Clicking on : " + locator);
+	}
+
+	public static void type(String locator, String value) {
+		if (locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		} else if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
+		} else if (locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
+		}
+		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
 	}
 
 	@AfterSuite
