@@ -1,10 +1,19 @@
-18:00:12,533  DEBUG devpinoyLogger:67 - Config file loaded !!!
-18:00:12,535  DEBUG devpinoyLogger:75 - OR file loaded !!!
-18:00:13,733  DEBUG devpinoyLogger:124 - Chrome Launched !!!
-18:00:15,955  DEBUG devpinoyLogger:137 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
-18:00:16,118  DEBUG devpinoyLogger:14 - Inside Login Test
-18:00:16,384  DEBUG devpinoyLogger:18 - Login Successfully Executed
-18:00:16,672  DEBUG devpinoyLogger:20 - Clicked On Add Customer Button !!!
-18:00:17,086  DEBUG devpinoyLogger:27 - Added Customer Data !!!
-18:00:17,154  DEBUG devpinoyLogger:31 - Customer Added Successfully!!!
-18:00:17,342  DEBUG devpinoyLogger:186 - Test Execution Completed !!!
+01:09:45,648  DEBUG devpinoyLogger:72 - Config file loaded !!!
+01:09:45,650  DEBUG devpinoyLogger:80 - OR file loaded !!!
+01:10:48,317  DEBUG devpinoyLogger:129 - Chrome Launched !!!
+01:10:49,654  DEBUG devpinoyLogger:142 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
+01:10:49,822  DEBUG devpinoyLogger:14 - Inside Login Test
+01:10:50,051  DEBUG devpinoyLogger:19 - Login Successfully Executed
+01:10:50,314  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+01:10:50,709  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+01:10:50,785  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+01:10:50,965  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+01:10:51,067  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+01:10:51,109  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+01:10:51,212  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+01:10:51,315  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+01:10:51,356  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+01:10:51,443  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+01:10:51,538  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+01:10:51,582  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+01:10:51,766  DEBUG devpinoyLogger:227 - Test Execution Completed !!!

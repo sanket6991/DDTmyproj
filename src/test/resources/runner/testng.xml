@@ -16,4 +16,9 @@
 			<class name="com.myproj.testcases.AddCustomerTest" />
 		</classes>
 	</test> <!-- Test -->
+	<test name="Open Account Test">
+	<classes>
+		<class name="com.myproj.testcases.OpenAccountTest" />
+	</classes>
+	</test>
 </suite> <!-- Suite -->

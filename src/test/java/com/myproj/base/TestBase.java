@@ -13,18 +13,23 @@ import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import com.myproj.utilities.ExcelReader;
 import com.myproj.utilities.ExtentManager;
+import com.myproj.utilities.TestUtil;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -44,7 +49,7 @@ public class TestBase {
 			System.getProperty("user.dir") + "/src/test/resources/excel/testdata.xlsx");
 
 	// "/home/sanket-laptop/Documents/testdata.xlsx");
-	public ExtentReports reo = ExtentManager.getInstance();
+	public static ExtentReports reo = ExtentManager.getInstance();
 	public static ExtentTest test;
 
 	@SuppressWarnings("deprecation")
@@ -174,6 +179,42 @@ public class TestBase {
 			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
 		}
 		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
+	}
+
+	static WebElement dropdown;
+
+	public static void select(String locator, String value) {
+		if (locator.endsWith("_CSS")) {
+			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
+		} else if (locator.endsWith("_XPATH")) {
+			dropdown =driver.findElement(By.xpath(OR.getProperty(locator)));
+		} else if (locator.endsWith("_ID")) {
+			dropdown =driver.findElement(By.id(OR.getProperty(locator)));
+			Select select = new Select(dropdown);
+            select.selectByVisibleText(value);
+			test.log(LogStatus.INFO, "Selecting from dropdown : " + locator + " Selected value as " + value);
+
+		}
+	}
+
+	public static void verifyEquals(String expected, String actual) throws IOException {
+		try {
+			Assert.assertEquals(actual, expected);
+		} catch (Throwable t) {
+
+			TestUtil.captureScreenshot();
+			Reporter.log("<br>" + "Verification failuer : " + t.getMessage() + "<br>");
+			Reporter.log("<a target=\"_blank\" herf=" + TestUtil.screenshotName + "><img src=" + TestUtil.screenshotName
+					+ "height=200 width=200></img</a>");
+			Reporter.log("<br>");
+			Reporter.log("<br>");
+			Reporter.log("<target=\"_blank\" href=" + TestUtil.screenshotName + "><img src=");
+			test.log(LogStatus.FAIL, "Verification Failed with exception : " + t.getMessage());
+			test.log(LogStatus.FAIL, test.addScreenCapture(TestUtil.screenshotName));
+			reo.endTest(test);
+			reo.flush();
+		}
+
 	}
 
 	@AfterSuite
