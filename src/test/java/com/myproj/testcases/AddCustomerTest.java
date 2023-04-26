@@ -11,7 +11,7 @@ import com.myproj.utilities.TestUtil;
 
 public class AddCustomerTest extends TestBase {
 
-	@Test(dataProviderClass = TestUtil.class, dataProvider="dp")
+	@Test(dataProviderClass = TestUtil.class, dataProvider="dp",priority=2)
 	public static void addCustomer(String firstName, String lastName, String postCode, String alerttext)
 			throws InterruptedException {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("addCustBtn_CSS"))));

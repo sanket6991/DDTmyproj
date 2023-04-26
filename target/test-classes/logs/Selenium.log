@@ -1,10 +1,18 @@
-10:51:55,416  DEBUG devpinoyLogger:67 - Config file loaded !!!
-10:51:55,419  DEBUG devpinoyLogger:75 - OR file loaded !!!
-10:51:57,018  DEBUG devpinoyLogger:124 - Chrome Launched !!!
-10:51:59,141  DEBUG devpinoyLogger:137 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
-10:51:59,302  DEBUG devpinoyLogger:14 - Inside Login Test
-10:51:59,593  DEBUG devpinoyLogger:19 - Login Successfully Executed
-10:51:59,850  DEBUG devpinoyLogger:20 - Clicked On Add Customer Button !!!
-10:52:00,310  DEBUG devpinoyLogger:24 - Added Customer Data !!!
-10:52:00,407  DEBUG devpinoyLogger:27 - Customer Added Successfully!!!
-10:52:00,587  DEBUG devpinoyLogger:186 - Test Execution Completed !!!
+20:41:49,817  DEBUG devpinoyLogger:73 - Config file loaded !!!
+20:41:49,820  DEBUG devpinoyLogger:81 - OR file loaded !!!
+20:41:51,134  DEBUG devpinoyLogger:130 - Chrome Launched !!!
+20:41:54,399  DEBUG devpinoyLogger:143 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
+20:41:54,584  DEBUG devpinoyLogger:14 - Inside Login Test
+20:41:54,898  DEBUG devpinoyLogger:19 - Login Successfully Executed
+20:41:55,169  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:55,521  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:55,609  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:55,764  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:55,884  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:55,931  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:56,056  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:56,185  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:56,233  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:56,336  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:56,451  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:56,513  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!

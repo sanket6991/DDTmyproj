@@ -26,10 +26,12 @@ public class TestUtil extends TestBase {
 	
 	
 	@DataProvider(name="dp")
-	public Object[][] getData(Method m) {
+	public static Object[][] getData( Method m) {
 		String sheetName =m.getName();
 		Object[][] data = xlsx.getSheetData(sheetName);
 
 		return data;
 	}
+	
+	
 }

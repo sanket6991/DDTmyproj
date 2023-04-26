@@ -1,19 +1,18 @@
-01:09:45,648  DEBUG devpinoyLogger:72 - Config file loaded !!!
-01:09:45,650  DEBUG devpinoyLogger:80 - OR file loaded !!!
-01:10:48,317  DEBUG devpinoyLogger:129 - Chrome Launched !!!
-01:10:49,654  DEBUG devpinoyLogger:142 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
-01:10:49,822  DEBUG devpinoyLogger:14 - Inside Login Test
-01:10:50,051  DEBUG devpinoyLogger:19 - Login Successfully Executed
-01:10:50,314  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
-01:10:50,709  DEBUG devpinoyLogger:23 - Added Customer Data !!!
-01:10:50,785  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
-01:10:50,965  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
-01:10:51,067  DEBUG devpinoyLogger:23 - Added Customer Data !!!
-01:10:51,109  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
-01:10:51,212  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
-01:10:51,315  DEBUG devpinoyLogger:23 - Added Customer Data !!!
-01:10:51,356  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
-01:10:51,443  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
-01:10:51,538  DEBUG devpinoyLogger:23 - Added Customer Data !!!
-01:10:51,582  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
-01:10:51,766  DEBUG devpinoyLogger:227 - Test Execution Completed !!!
+20:41:49,817  DEBUG devpinoyLogger:73 - Config file loaded !!!
+20:41:49,820  DEBUG devpinoyLogger:81 - OR file loaded !!!
+20:41:51,134  DEBUG devpinoyLogger:130 - Chrome Launched !!!
+20:41:54,399  DEBUG devpinoyLogger:143 - Navigated to : https://www.way2automation.com/angularjs-protractor/banking/#/login
+20:41:54,584  DEBUG devpinoyLogger:14 - Inside Login Test
+20:41:54,898  DEBUG devpinoyLogger:19 - Login Successfully Executed
+20:41:55,169  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:55,521  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:55,609  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:55,764  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:55,884  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:55,931  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:56,056  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:56,185  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:56,233  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!
+20:41:56,336  DEBUG devpinoyLogger:19 - Clicked On Add Customer Button !!!
+20:41:56,451  DEBUG devpinoyLogger:23 - Added Customer Data !!!
+20:41:56,513  DEBUG devpinoyLogger:26 - Customer Added Successfully!!!

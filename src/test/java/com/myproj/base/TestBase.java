@@ -39,6 +39,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBase {
 
 	public static WebDriver driver;
+	public static WebElement dropdown;
 	public static Properties Config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
@@ -117,7 +118,7 @@ public class TestBase {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions ops = new ChromeOptions();
 				ops.addArguments("--remote-allow-origins=*");
-				ops.setHeadless(true);
+				//ops.setHeadless(true);
 				ops.addArguments("--disable");
 				DesiredCapabilities cp = new DesiredCapabilities();
 				cp.setCapability(ChromeOptions.CAPABILITY, ops);
@@ -181,20 +182,20 @@ public class TestBase {
 		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
 	}
 
-	static WebElement dropdown;
 
 	public static void select(String locator, String value) {
 		if (locator.endsWith("_CSS")) {
 			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
 		} else if (locator.endsWith("_XPATH")) {
-			dropdown =driver.findElement(By.xpath(OR.getProperty(locator)));
+			dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
 		} else if (locator.endsWith("_ID")) {
-			dropdown =driver.findElement(By.id(OR.getProperty(locator)));
+			dropdown = driver.findElement(By.id(OR.getProperty(locator)));
 			Select select = new Select(dropdown);
-            select.selectByVisibleText(value);
+			select.selectByVisibleText(value);
 			test.log(LogStatus.INFO, "Selecting from dropdown : " + locator + " Selected value as " + value);
 
 		}
+
 	}
 
 	public static void verifyEquals(String expected, String actual) throws IOException {
@@ -216,14 +217,12 @@ public class TestBase {
 		}
 
 	}
-
-	@AfterSuite
-	public void tearDown() {
-
-		if (driver != null) {
-			driver.quit();
-
-		}
-		log.debug("Test Execution Completed !!!");
-	}
 }
+
+/*
+ * @AfterSuite public void tearDown() {
+ * 
+ * if (driver != null) { driver.quit();
+ * 
+ * } log.debug("Test Execution Completed !!!"); } }
+ */
