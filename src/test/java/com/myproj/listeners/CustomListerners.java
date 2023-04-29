@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 
 import com.myproj.base.TestBase;
 import com.myproj.utilities.TestUtil;
@@ -17,6 +18,9 @@ public class CustomListerners extends TestBase implements ITestListener {
 	public void onTestStart(ITestResult result) {
 		test = reo.startTest(result.getName().toUpperCase());
 		// TODO Auto-generated method stub
+		if(!TestUtil.isTestRunnable(result.getName(), xlsx)) {
+			throw new SkipException("Skipping the test"+result.getName().toUpperCase()+" as runmode is NO");
+		}
 		ITestListener.super.onTestStart(result);
 	}
 

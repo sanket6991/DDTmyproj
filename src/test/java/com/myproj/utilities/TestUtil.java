@@ -16,7 +16,7 @@ public class TestUtil extends TestBase {
 	public static String screenshotPath;
 	public static String screenshotName;
 
-	public static void captureScreenshot() throws IOException {
+	public static void captureScreenshot() throws IOException{
 		Date d = new Date();
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".png";
@@ -33,5 +33,24 @@ public class TestUtil extends TestBase {
 		return data;
 	}
 	
-	
+	public static boolean isTestRunnable(String testName, ExcelReader xlsx) {
+		String sheetName1="test_suite";
+		int rows = xlsx.getRowCount(sheetName1);
+		
+		for(int rNum=2; rNum<=rows; rNum++) {
+			String testCase = xlsx.getCellData(testName, "TCID", rNum);
+			if(testCase.equalsIgnoreCase(testName));
+			{
+				String runmode= xlsx.getCellData(sheetName1, "Runmode", rNum);
+				if(runmode.equalsIgnoreCase("Y")) {
+				return true;
+				}
+				else {
+					return false;
+			}
+		}
+	}
+		return false;
+
+	}
 }

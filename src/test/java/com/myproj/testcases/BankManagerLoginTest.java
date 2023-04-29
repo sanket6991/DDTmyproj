@@ -15,7 +15,7 @@ public class BankManagerLoginTest extends TestBase {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(OR.getProperty("bmlBtn_CSS"))));
 		click("bmlBtn_CSS");
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn_CSS"))),
-				"Login is not Successful");
+		"Login is not Successful");
 		log.debug("Login Successfully Executed");
 
 	}

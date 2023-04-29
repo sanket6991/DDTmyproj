@@ -118,7 +118,7 @@ public class TestBase {
 				WebDriverManager.chromedriver().setup();
 				ChromeOptions ops = new ChromeOptions();
 				ops.addArguments("--remote-allow-origins=*");
-				//ops.setHeadless(true);
+				// ops.setHeadless(true);
 				ops.addArguments("--disable");
 				DesiredCapabilities cp = new DesiredCapabilities();
 				cp.setCapability(ChromeOptions.CAPABILITY, ops);
@@ -182,19 +182,19 @@ public class TestBase {
 		test.log(LogStatus.INFO, "Typing in : " + locator + " entered value as " + value);
 	}
 
-
 	public static void select(String locator, String value) {
 		if (locator.endsWith("_CSS")) {
 			dropdown = driver.findElement(By.cssSelector(OR.getProperty(locator)));
-		} else if (locator.endsWith("_XPATH")) {
+		}
+
+		else if (locator.endsWith("_XPATH")) {
 			dropdown = driver.findElement(By.xpath(OR.getProperty(locator)));
 		} else if (locator.endsWith("_ID")) {
 			dropdown = driver.findElement(By.id(OR.getProperty(locator)));
-			Select select = new Select(dropdown);
-			select.selectByVisibleText(value);
-			test.log(LogStatus.INFO, "Selecting from dropdown : " + locator + " Selected value as " + value);
-
 		}
+		Select select = new Select(dropdown);
+		select.selectByVisibleText(value);
+		test.log(LogStatus.INFO, "Selecting from dropdown : " + locator + " Selected value as " + value);
 
 	}
 
@@ -217,12 +217,16 @@ public class TestBase {
 		}
 
 	}
-}
 
-/*
- * @AfterSuite public void tearDown() {
- * 
- * if (driver != null) { driver.quit();
- * 
- * } log.debug("Test Execution Completed !!!"); } }
- */
+
+
+	@AfterSuite
+	public void tearDown() {
+
+		if (driver != null) {
+			driver.quit();
+
+		}
+		log.debug("Test Execution Completed !!!");
+	}
+}
