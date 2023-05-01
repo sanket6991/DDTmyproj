@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Date;
+import java.util.Hashtable;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -28,7 +29,19 @@ public class TestUtil extends TestBase {
 	@DataProvider(name="dp")
 	public static Object[][] getData( Method m) {
 		String sheetName =m.getName();
-		Object[][] data = xlsx.getSheetData(sheetName);
+		int rows = xlsx.getRowCount(sheetName);
+		int cols = xlsx.getColumnCount(sheetName);
+		
+		//Object[][] data = xlsx.getSheetData(sheetName);
+		Object[][] data = new Object[rows-1][1];
+		Hashtable<String,String> table = null;
+		for(int rowNum=2; rowNum<=rows;rowNum++) {
+			table = new Hashtable<String, String>();
+			for(int colNum = 0; colNum<cols ; colNum++) {
+				table.put(xlsx.getCellData(sheetName, colNum, 1), xlsx.getCellData(sheetName, colNum, rowNum));
+				data[rowNum-2][colNum]=table;
+			}
+		}
 
 		return data;
 	}

@@ -59,6 +59,9 @@ public class CustomListerners extends TestBase implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
+		test.log(LogStatus.SKIP, result.getName().toUpperCase()+"Skipped the Test as Run mode is No");
+		reo.endTest(test);
+		reo.flush();	
 		ITestListener.super.onTestSkipped(result);
 	}
 

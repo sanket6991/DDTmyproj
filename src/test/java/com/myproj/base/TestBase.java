@@ -35,7 +35,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+  
 public class TestBase {
 
 	public static WebDriver driver;

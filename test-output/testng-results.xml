@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="4" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-29T12:04:24 IST" name="Suite" finished-at="2023-04-29T12:04:27 IST" duration-ms="2765">
+  <suite started-at="2023-04-29T23:26:20 IST" name="Suite" finished-at="2023-04-29T23:26:22 IST" duration-ms="2292">
     <groups>
     </groups>
-    <test started-at="2023-04-29T12:04:24 IST" name="Bank Manager Login Test" finished-at="2023-04-29T12:04:25 IST" duration-ms="414">
+    <test started-at="2023-04-29T23:26:20 IST" name="Bank Manager Login Test" finished-at="2023-04-29T23:26:20 IST" duration-ms="451">
       <class name="com.myproj.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@25c53f74]" started-at="2023-04-29T12:04:24 IST" name="loginAsBankManager" finished-at="2023-04-29T12:04:25 IST" duration-ms="210" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@25c53f74]" started-at="2023-04-29T23:26:20 IST" name="loginAsBankManager" finished-at="2023-04-29T23:26:20 IST" duration-ms="262" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.myproj.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2023-04-29T12:04:25 IST" name="Add Customer Test" finished-at="2023-04-29T12:04:26 IST" duration-ms="1560">
+    <test started-at="2023-04-29T23:26:20 IST" name="Add Customer Test" finished-at="2023-04-29T23:26:22 IST" duration-ms="1049">
       <class name="com.myproj.testcases.AddCustomerTest">
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T12:04:25 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T12:04:25 IST" duration-ms="567" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="518" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,11 +37,16 @@
                 <![CDATA[Customer added successfully]]>
               </value>
             </param>
+            <param index="4">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T12:04:25 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T12:04:26 IST" duration-ms="264" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="2" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -63,11 +68,54 @@
                 <![CDATA[Customer added successfully]]>
               </value>
             </param>
+            <param index="4">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping The Test case as the runmode for data for data set is NO]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping The Test case as the runmode for data for data set is NO
+at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T12:04:26 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T12:04:26 IST" duration-ms="248" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -89,11 +137,16 @@
                 <![CDATA[Customer added successfully]]>
               </value>
             </param>
+            <param index="4">
+              <value>
+                <![CDATA[Y]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T12:04:26 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T12:04:26 IST" duration-ms="246" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:22 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:22 IST" duration-ms="1" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -115,19 +168,62 @@
                 <![CDATA[Customer added successfully]]>
               </value>
             </param>
+            <param index="4">
+              <value>
+                <![CDATA[N]]>
+              </value>
+            </param>
           </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping The Test case as the runmode for data for data set is NO]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping The Test case as the runmode for data for data set is NO
+at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:19)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
       </class> <!-- com.myproj.testcases.AddCustomerTest -->
     </test> <!-- Add Customer Test -->
-    <test started-at="2023-04-29T12:04:26 IST" name="Open Account Test" finished-at="2023-04-29T12:04:27 IST" duration-ms="779">
+    <test started-at="2023-04-29T23:26:22 IST" name="Open Account Test" finished-at="2023-04-29T23:26:22 IST" duration-ms="775">
       <class name="com.myproj.testcases.OpenAccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T12:04:20 IST" name="setUp" finished-at="2023-04-29T12:04:24 IST" duration-ms="4104" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:14 IST" name="setUp" finished-at="2023-04-29T23:26:20 IST" duration-ms="6451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="openAccountTest(java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T12:04:26 IST" name="openAccountTest" data-provider="dp" finished-at="2023-04-29T12:04:27 IST" duration-ms="674" status="PASS">
+        <test-method signature="openAccountTest(java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:22 IST" name="openAccountTest" data-provider="dp" finished-at="2023-04-29T23:26:22 IST" duration-ms="699" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,7 +239,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAccountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T12:04:27 IST" name="tearDown" finished-at="2023-04-29T12:04:27 IST" duration-ms="113" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:22 IST" name="tearDown" finished-at="2023-04-29T23:26:22 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
