@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="2"
-           time="0.819">
+           time="0.938">
   <properties />
   
             <testcase name="addCustomer" time="0.0" classname="com.myproj.testcases.AddCustomerTest">
@@ -14,7 +14,7 @@
           <skipped />
     </testcase>
   
-            <testcase name="addCustomer" time="0.298" classname="com.myproj.testcases.AddCustomerTest" />
-                <testcase name="addCustomer" time="0.518" classname="com.myproj.testcases.AddCustomerTest" />
+            <testcase name="addCustomer" time="0.725" classname="com.myproj.testcases.AddCustomerTest" />
+                <testcase name="addCustomer" time="0.209" classname="com.myproj.testcases.AddCustomerTest" />
       
 </testsuite>

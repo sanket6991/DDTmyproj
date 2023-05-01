@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="6" passed="4" failed="0" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-29T23:26:20 IST" name="Suite" finished-at="2023-04-29T23:26:22 IST" duration-ms="2292">
+  <suite started-at="2023-05-01T16:15:42 IST" name="Suite" finished-at="2023-05-01T16:15:44 IST" duration-ms="2267">
     <groups>
     </groups>
-    <test started-at="2023-04-29T23:26:20 IST" name="Bank Manager Login Test" finished-at="2023-04-29T23:26:20 IST" duration-ms="451">
+    <test started-at="2023-05-01T16:15:42 IST" name="Bank Manager Login Test" finished-at="2023-05-01T16:15:43 IST" duration-ms="419">
       <class name="com.myproj.testcases.BankManagerLoginTest">
-        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@25c53f74]" started-at="2023-04-29T23:26:20 IST" name="loginAsBankManager" finished-at="2023-04-29T23:26:20 IST" duration-ms="262" status="PASS">
+        <test-method signature="loginAsBankManager()[pri:0, instance:com.myproj.testcases.BankManagerLoginTest@25c53f74]" started-at="2023-05-01T16:15:42 IST" name="loginAsBankManager" finished-at="2023-05-01T16:15:42 IST" duration-ms="234" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAsBankManager -->
       </class> <!-- com.myproj.testcases.BankManagerLoginTest -->
     </test> <!-- Bank Manager Login Test -->
-    <test started-at="2023-04-29T23:26:20 IST" name="Add Customer Test" finished-at="2023-04-29T23:26:22 IST" duration-ms="1049">
+    <test started-at="2023-05-01T16:15:43 IST" name="Add Customer Test" finished-at="2023-05-01T16:15:44 IST" duration-ms="1141">
       <class name="com.myproj.testcases.AddCustomerTest">
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="518" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-05-01T16:15:43 IST" name="addCustomer" data-provider="dp" finished-at="2023-05-01T16:15:43 IST" duration-ms="725" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -46,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="2" status="SKIP">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-05-01T16:15:43 IST" name="addCustomer" data-provider="dp" finished-at="2023-05-01T16:15:43 IST" duration-ms="2" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -80,7 +80,7 @@
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping The Test case as the runmode for data for data set is NO
-at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:19)
+at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -115,7 +115,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:21 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:21 IST" duration-ms="298" status="PASS">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-05-01T16:15:43 IST" name="addCustomer" data-provider="dp" finished-at="2023-05-01T16:15:44 IST" duration-ms="209" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -146,7 +146,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCustomer -->
-        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-04-29T23:26:22 IST" name="addCustomer" data-provider="dp" finished-at="2023-04-29T23:26:22 IST" duration-ms="1" status="SKIP">
+        <test-method signature="addCustomer(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.myproj.testcases.AddCustomerTest@1e008f36]" started-at="2023-05-01T16:15:44 IST" name="addCustomer" data-provider="dp" finished-at="2023-05-01T16:15:44 IST" duration-ms="2" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -180,7 +180,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.SkipException: Skipping The Test case as the runmode for data for data set is NO
-at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:19)
+at com.myproj.testcases.AddCustomerTest.addCustomer(AddCustomerTest.java:21)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -217,13 +217,13 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- addCustomer -->
       </class> <!-- com.myproj.testcases.AddCustomerTest -->
     </test> <!-- Add Customer Test -->
-    <test started-at="2023-04-29T23:26:22 IST" name="Open Account Test" finished-at="2023-04-29T23:26:22 IST" duration-ms="775">
+    <test started-at="2023-05-01T16:15:44 IST" name="Open Account Test" finished-at="2023-05-01T16:15:44 IST" duration-ms="691">
       <class name="com.myproj.testcases.OpenAccountTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:14 IST" name="setUp" finished-at="2023-04-29T23:26:20 IST" duration-ms="6451" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-05-01T16:15:40 IST" name="setUp" finished-at="2023-05-01T16:15:42 IST" duration-ms="2521" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="openAccountTest(java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:22 IST" name="openAccountTest" data-provider="dp" finished-at="2023-04-29T23:26:22 IST" duration-ms="699" status="PASS">
+        <test-method signature="openAccountTest(java.lang.String,java.lang.String)[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-05-01T16:15:44 IST" name="openAccountTest" data-provider="dp" finished-at="2023-05-01T16:15:44 IST" duration-ms="621" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,7 +239,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAccountTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-04-29T23:26:22 IST" name="tearDown" finished-at="2023-04-29T23:26:22 IST" duration-ms="106" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.myproj.testcases.OpenAccountTest@359ff4d9]" started-at="2023-05-01T16:15:44 IST" name="tearDown" finished-at="2023-05-01T16:15:44 IST" duration-ms="106" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
