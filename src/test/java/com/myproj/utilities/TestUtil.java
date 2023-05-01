@@ -28,24 +28,22 @@ public class TestUtil extends TestBase {
 	@DataProvider(name="dp")
 	public static Object[][] getData( Method m) {
 		String sheetName =m.getName();
-		/*
-		 * int rows = xlsx.getRowCount(sheetName); int cols =
-		 * xlsx.getColumnCount(sheetName);
-		 */
+	
+		 int rows = xlsx.getRowCount(sheetName); 
+		 int cols =xlsx.getColumnCount(sheetName);
+		
 		
 		Object[][] data = xlsx.getSheetData(sheetName);
-//		Object[][] data = new Object[rows-1][1];
-//		Hashtable<String,String> table = null;
-//		for(int rowNum=2; rowNum<=rows;rowNum++) {
-//			table = new Hashtable<String, String>();
-//			for(int colNum = 0; colNum<cols ; colNum++) {
-//				table.put(xlsx.getCellData(sheetName, colNum, rowNum), xlsx.getCellData(sheetName, colNum, rowNum));
-//				data[rowNum-2][colNum]=table;
-
-
-	return data;
-	}
-
+		/*Object[][] data = new Object[rows-1][1];
+		Hashtable<String,String> table = null;
+		for(int rowNum=2; rowNum<=rows;rowNum++) {
+		table = new Hashtable<String, String>();
+			for(int colNum = 0; colNum<cols ; colNum++) {
+			table.put(xlsx.getCellData(sheetName, colNum, rowNum), xlsx.getCellData(sheetName, colNum, rowNum));				
+			data[rowNum-2][0]=table;*/
+		return data;
+		}
+	
 	public static boolean isTestRunnable(String testName, ExcelReader xlsx) {
 		String sheetName1 = "test_suite";
 		int rows = xlsx.getRowCount(sheetName1);
